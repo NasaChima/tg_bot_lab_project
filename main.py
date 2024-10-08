@@ -64,7 +64,6 @@ def analyze_sentence(message):
     analysis_results = []
     for word in words:
         analysis = m.analyze(word)
-        bot.reply_to(message, f"{analysis}")
         if analysis and 'analysis' in analysis[0] and analysis[0]['analysis']:
             lexeme = analysis[0]['analysis'][0]
             word_analysis = {
